@@ -18,5 +18,4 @@ mv kops-linux-amd64 /usr/local/bin/kops
 aws s3api create-bucket --bucket anjaneyulubucket002.k8s.local --region us-east-1
 aws s3api put-bucket-versioning --bucket anjaneyulubucket002.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
 export KOPS_STATE_STORE=s3://anjaneyulubucket002.k8s.local
-kops create cluster --name anjaneyulu.k8s.local --zones us-east-1a --control-plane-image ami-0360c520857e3138f --control-plane-count=1 --control-plane-size t2.large --image ami-0360c520857e3138f --node-count=2 --node-size t2.medium
-kops update cluster --name anjaneyulu.k8s.local --yes --admin
+kops create cluster --name anjaneyulu.k8s.local --zones us-east-1a --control-plane-image ami-0fa3fe0fa7920f68e --control-plane-count=1 --control-plane-size c7i-flex.large --image ami-0fa3fe0fa7920f68e --node-count=2 --node-size c7i-flex.large
