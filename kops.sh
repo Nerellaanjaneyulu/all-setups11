@@ -8,5 +8,5 @@ mv kops-linux-amd64 /usr/local/bin/kops
 echo "export PATH=$PATH:/usr/local/bin/" >> source .bashrc
 
 export KOPS_STATE_STORE=s3://anjaneyulubucket002.k8s.local
-kops create cluster --name anjaneyulu.k8s.local --zones us-east-1a --control-plane-image ami-0fa3fe0fa7920f68e --control-plane-count=1 --control-plane-size c7i-flex.large --image ami-0fa3fe0fa7920f68e --node-count=2 --node-size c7i-flex.large
+kops create cluster --name anjaneyulu.k8s.local --zones us-east-1a --control-plane-image ami-0f3caa1cf4417e51b --control-plane-count=1 --control-plane-size c7i-flex.large --image ami-0f3caa1cf4417e51b --node-count=2 --node-size c7i-flex.large
 kops update cluster --name anjaneyulu.k8s.local --yes --admin
