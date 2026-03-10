@@ -7,6 +7,6 @@ mv kubectl /usr/local/bin/kubectl
 mv kops-linux-amd64 /usr/local/bin/kops
 echo "export PATH=$PATH:/usr/local/bin/" >> source .bashrc
 
-export KOPS_STATE_STORE=s3://ramakrishnabucket002.k8s.local
+export KOPS_STATE_STORE=s3://anjaneyulubucket006.k8s.local
 kops create cluster --name anjaneyulu.k8s.local --zones us-east-1a --control-plane-image ami-0b6c6ebed2801a5cb --control-plane-count=1 --control-plane-size c7i-flex.large --image ami-0b6c6ebed2801a5cb --node-count=2 --node-size c7i-flex.large
 kops update cluster --name anjaneyulu.k8s.local --yes --admin
