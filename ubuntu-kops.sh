@@ -20,3 +20,10 @@ aws s3api put-bucket-versioning --bucket anjaneyulubucket006.k8s.local --region 
 export KOPS_STATE_STORE=s3://anjaneyulubucket006.k8s.local
 kops create cluster --name anjaneyulu.k8s.local --zones us-east-1a --control-plane-image ami-091138d0f0d41ff90 --control-plane-count=1 --control-plane-size c7i-flex.large --image ami-091138d0f0d41ff90 --node-count=2 --node-size c7i-flex.large
 kops update cluster --name anjaneyulu.k8s.local --yes --admin
+
+
+
+export KOPS_STATE_STORE=s3://ramakrishnabucket.k8s.local
+echo $KOPS_STATE_STORE
+
+
