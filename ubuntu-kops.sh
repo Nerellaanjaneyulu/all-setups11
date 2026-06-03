@@ -23,7 +23,7 @@ kops update cluster --name anjaneyulu.k8s.local --yes --admin
 
 
 
-export KOPS_STATE_STORE=s3://ramakrishnabucket.k8s.local
+export KOPS_STATE_STORE=s3://anjaneyulubucket006.k8s.local
 echo $KOPS_STATE_STORE
 
 
