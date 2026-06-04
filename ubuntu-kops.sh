@@ -15,15 +15,15 @@ chmod +x kops-linux-amd64 kubectl
 mv kubectl /usr/local/bin/kubectl
 mv kops-linux-amd64 /usr/local/bin/kops
 
-aws s3api create-bucket --bucket anjaneyulubucket006.k8s.local --region ap-south-2
-aws s3api put-bucket-versioning --bucket anjaneyulubucket006.k8s.local --region ap-south-2 --versioning-configuration Status=Enabled
-export KOPS_STATE_STORE=s3://anjaneyulubucket006.k8s.local
+aws s3api create-bucket --bucket ramakrishnabucket2628.k8s.local  --region ap-south-2
+aws s3api put-bucket-versioning --bucket ramakrishnabucket2628.k8s.local  --region ap-south-2 --versioning-configuration Status=Enabled
+export KOPS_STATE_STORE=s3://ramakrishnabucket2628.k8s.local 
 kops create cluster --name anjaneyulu.k8s.local --zones ap-south-2 --control-plane-image ami-024ebedf48d280810 --control-plane-count=1 --control-plane-size c7i-flex.large --image ami-024ebedf48d280810 --node-count=2 --node-size c7i-flex.large
 kops update cluster --name anjaneyulu.k8s.local --yes --admin
 
 
 
-export KOPS_STATE_STORE=s3://anjaneyulubucket006.k8s.local
+export KOPS_STATE_STORE=s3://ramakrishnabucket2628.k8s.local 
 echo $KOPS_STATE_STORE
 
 
