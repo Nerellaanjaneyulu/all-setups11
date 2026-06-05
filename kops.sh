@@ -10,3 +10,8 @@ echo "export PATH=$PATH:/usr/local/bin/" >> source .bashrc
 export KOPS_STATE_STORE=s3://anjaneyulubucket006.k8s.local
 kops create cluster --name anjaneyulu.k8s.local --zones us-east-1a --control-plane-image ami-00e801948462f718a --control-plane-count=1 --control-plane-size c7i-flex.large --image ami-00e801948462f718a --node-count=2 --node-size c7i-flex.large
 kops update cluster --name anjaneyulu.k8s.local --yes --admin
+
+
+
+export KOPS_STATE_STORE=s3://anjaneyulubucket006.k8s.local
+echo $KOPS_STATE_STORE
